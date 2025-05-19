@@ -1,6 +1,8 @@
 import Image from "next/image"
-import { Github, Search, ArrowRight, Twitter, Instagram, Youtube, Disc } from "lucide-react"
+import { ArrowRight, Twitter, Instagram, Youtube, Disc } from "lucide-react"
 import Link from "next/link"
+import { ServiceCard } from "@/components/shared/service-card"
+
 
 export default function Home() {
   return (
@@ -8,9 +10,9 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-zinc-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Image src="/gem-logo.png" alt="Gem Logo" width={32} height={32} />
-            <span className="text-xl font-semibold">Gem</span>
+          <div className="flex items-center justify-center">
+            <Image src="/altergemu.svg" alt="Altergemu Logo" width={64} height={64} className="my-auto" />
+            <span className="text-xl font-semibold my-auto ml-2">Altergemu</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -30,64 +32,26 @@ export default function Home() {
               Docs
             </Link>
           </nav>
-
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-2">
-              <Github className="h-5 w-5" />
-              <span className="text-sm font-medium">34.9k</span>
-            </div>
-            <Link href="#" className="hidden md:block text-sm font-medium hover:text-zinc-400 transition-colors">
-              Login
-            </Link>
-            <Link
-              href="#"
-              className="bg-white text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-200 transition-colors"
-            >
-              Get Started
-            </Link>
-            <button className="md:hidden">
-              <Search className="h-5 w-5" />
-            </button>
-          </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="py-20 md:py-32 border-b border-zinc-800 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="lg:flex items-center justify-center lg:justify-around">
             <div>
-              <Link
-                href="#"
-                className="inline-flex items-center text-sm text-zinc-400 hover:text-white mb-6 transition-colors"
-              >
-                <span>Профессиональная веб-разработка</span>
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                The backend <br />
-                to build the <br />
-                modern web.
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">Altergemu</h1>
               <div className="flex items-center space-x-4 mt-8">
                 <button className="bg-white text-black text-sm font-medium px-6 py-3 rounded-md hover:bg-zinc-200 transition-colors">
                   Наши услуги
                 </button>
               </div>
-              <Link
-                href="#"
-                className="inline-flex items-center mt-8 text-sm font-medium hover:text-zinc-400 transition-colors"
-              >
-                <span>Связаться с нами</span>
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <Image
-                  src="/gem-logo.png"
-                  alt="Gem Logo"
-                  fill
+            <div className="flex">
+              <div className="relative w-[40vh] h-[40vh] lg:w-[60vh] lg:h-[60vh] md:w-80 md:h-80">
+                <img
+                  src="/altergemu.svg"
+                  alt="Altergemu Logo"
                   className="object-contain animate-float filter drop-shadow-lg"
                 />
               </div>
@@ -97,70 +61,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 -z-10"></div>
       </section>
 
-      {/* Brands Section */}
-      <section className="py-16 border-b border-zinc-800">
-        <div className="container mx-auto px-4">
-          <p className="text-center text-zinc-500 mb-12">
-            Gem is the open-source Next.js backend used in production by the most innovative companies on earth.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="U.S. Air Force"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="Asics"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="Kong"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="Disney"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="Microsoft"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=40&width=100"
-                alt="Bugatti"
-                width={100}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Pricing Section */}
       <section className="py-20 border-b border-zinc-800">
@@ -172,126 +72,101 @@ export default function Home() {
 
           {/* Websites */}
           <h3 className="text-2xl font-bold mb-8 text-center">Сайты</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Сайт-визитка</h4>
-                <p className="text-zinc-400 mb-4">Идеальное решение для представления вашего бизнеса в интернете</p>
-                <div className="text-2xl font-bold">от 15 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Корпоративный информационный web-сайт</h4>
-                <p className="text-zinc-400 mb-4">Полноценное представительство компании в сети</p>
-                <div className="text-2xl font-bold">от 30 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Корпоративный имиджевый web-сайт</h4>
-                <p className="text-zinc-400 mb-4">Презентационный сайт с уникальным дизайном</p>
-                <div className="text-2xl font-bold">от 40 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Интернет-магазин</h4>
-                <p className="text-zinc-400 mb-4">Полнофункциональная платформа для онлайн-продаж</p>
-                <div className="text-2xl font-bold">от 100 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Информационный сайт</h4>
-                <p className="text-zinc-400 mb-4">Ресурс для публикации и управления контентом</p>
-                <div className="text-2xl font-bold">от 50 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Персональный проект</h4>
-                <p className="text-zinc-400 mb-4">Индивидуальное решение под ваши задачи</p>
-                <div className="text-2xl font-bold">от 50 000 ₽</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
+            <ServiceCard
+              title="Сайт-визитка"
+              description="Идеальное решение для представления вашего бизнеса в интернете"
+              price="от 15 000 ₽"
+              details="Сайт-визитка включает до 5 страниц с основной информацией о вашей компании, услугах и контактах. Идеально подходит для малого бизнеса, который хочет иметь базовое присутствие в интернете. В стоимость входит адаптивный дизайн, базовая SEO-оптимизация и размещение на хостинге."
+            />
+            <ServiceCard
+              title="Корпоративный информационный web-сайт"
+              description="Полноценное представительство компании в сети"
+              price="от 30 000 ₽"
+              details="Корпоративный информационный сайт включает до 15 страниц с подробной информацией о компании, услугах, проектах, новостях и контактах. Подходит для среднего бизнеса, которому необходимо полноценное представительство в интернете. В стоимость входит уникальный дизайн, адаптивная верстка, базовая SEO-оптимизация, интеграция с CMS и размещение на хостинге."
+            />
+            <ServiceCard
+              title="Корпоративный имиджевый web-сайт"
+              description="Презентационный сайт с уникальным дизайном"
+              price="от 40 000 ₽"
+              details="Корпоративный имиджевый сайт - это презентационный ресурс с уникальным дизайном и интерактивными элементами. Идеально подходит для компаний, которые хотят выделиться на фоне конкурентов и произвести впечатление на посетителей. В стоимость входит эксклюзивный дизайн, анимации, адаптивная верстка, SEO-оптимизация и размещение на хостинге."
+            />
+            <ServiceCard
+              title="Интернет-магазин"
+              description="Полнофункциональная платформа для онлайн-продаж"
+              price="от 100 000 ₽"
+              details="Интернет-магазин включает каталог товаров, корзину, личный кабинет пользователя, систему оплаты и доставки. Подходит для бизнеса, который хочет продавать товары или услуги онлайн. В стоимость входит уникальный дизайн, адаптивная верстка, интеграция с CMS, платежными системами и службами доставки, SEO-оптимизация и размещение на хостинге."
+            />
+            <ServiceCard
+              title="Информационный сайт"
+              description="Ресурс для публикации и управления контентом"
+              price="от 50 000 ₽"
+              details="Информационный сайт включает систему управления контентом, блог, новостную ленту и другие информационные разделы. Подходит для медиа-проектов, блогов и информационных порталов. В стоимость входит уникальный дизайн, адаптивная верстка, интеграция с CMS, SEO-оптимизация и размещение на хостинге."
+            />
+            <ServiceCard
+              title="Персональный проект"
+              description="Индивидуальное решение под ваши задачи"
+              price="от 50 000 ₽"
+              details="Персональный проект - это индивидуальное решение, разработанное под конкретные задачи и потребности вашего бизнеса. Стоимость и сроки зависят от сложности проекта и требуемого функционала. Мы готовы обсудить ваши идеи и предложить оптимальное решение."
+            />
           </div>
 
           {/* Design */}
           <h3 className="text-2xl font-bold mb-8 text-center">Дизайн</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Логотип</h4>
-                <p className="text-zinc-400 mb-4">Уникальный логотип для вашего бренда</p>
-                <div className="text-2xl font-bold">от 10 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Макет сайта</h4>
-                <p className="text-zinc-400 mb-4">Дизайн-концепция вашего будущего сайта</p>
-                <div className="text-2xl font-bold">от 10 000 ₽</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Другое</h4>
-                <p className="text-zinc-400 mb-4">Индивидуальные дизайн-решения</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mb-16">
+            <ServiceCard
+              title="Логотип"
+              description="Уникальный логотип для вашего бренда"
+              price="от 10 000 ₽"
+              details="Разработка уникального логотипа включает анализ рынка, создание концепции, разработку нескольких вариантов дизайна и финальную доработку выбранного варианта. В стоимость входит предоставление логотипа в различных форматах и цветовых решениях."
+            />
+            <ServiceCard
+              title="Макет сайта"
+              description="Дизайн-концепция вашего будущего сайта"
+              price="от 10 000 ₽"
+              details="Разработка макета сайта включает создание концепции дизайна, прототипирование и визуализацию основных страниц. В стоимость входит предоставление макетов в формате Figma или PSD."
+            />
+            <ServiceCard
+              title="Другое"
+              description="Индивидуальные дизайн-решения"
+              price="по договоренности"
+              details="Мы также предлагаем разработку фирменного стиля, дизайн полиграфической продукции, оформление социальных сетей и другие дизайн-услуги. Стоимость зависит от сложности и объема работ."
+            />
           </div>
 
           {/* Other */}
           <h3 className="text-2xl font-bold mb-8 text-center">Другое</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">SMM продвижение</h4>
-                <p className="text-zinc-400 mb-4">Продвижение в социальных сетях</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Документирование приложения</h4>
-                <p className="text-zinc-400 mb-4">Создание технической документации</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Разработка концепта приложения</h4>
-                <p className="text-zinc-400 mb-4">Проработка идеи и архитектуры приложения</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Телеграмм боты</h4>
-                <p className="text-zinc-400 mb-4">Разработка ботов для Telegram</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors">
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Остальные IT-решения</h4>
-                <p className="text-zinc-400 mb-4">Индивидуальные IT-проекты любой сложности</p>
-                <div className="text-2xl font-bold">по договоренности</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+            <ServiceCard
+              title="SMM продвижение"
+              description="Продвижение в социальных сетях"
+              price="по договоренности"
+              details="SMM продвижение включает разработку стратегии, создание и публикацию контента, работу с аудиторией и аналитику. Стоимость зависит от выбранных социальных сетей, частоты публикаций и дополнительных услуг."
+            />
+            <ServiceCard
+              title="Документирование приложения"
+              description="Создание технической документации"
+              price="по договоренности"
+              details="Создание технической документации включает разработку руководств пользователя, технических спецификаций, API-документации и другой необходимой документации. Стоимость зависит от сложности проекта и объема документации."
+            />
+            <ServiceCard
+              title="Разработка концепта приложения"
+              description="Проработка идеи и архитектуры приложения"
+              price="по договоренности"
+              details="Разработка концепта приложения включает анализ рынка, определение целевой аудитории, проработку функционала, создание прототипа и технической спецификации. Стоимость зависит от сложности проекта."
+            />
+            <ServiceCard
+              title="Телеграмм боты"
+              description="Разработка ботов для Telegram"
+              price="по договоренности"
+              details="Разработка Telegram-ботов включает проектирование функционала, разработку, тестирование и размещение бота на сервере. Стоимость зависит от сложности функционала и интеграций."
+            />
+            <ServiceCard
+              title="Остальные IT-решения"
+              description="Индивидуальные IT-проекты любой сложности"
+              price="по договоренности"
+              details="Мы также предлагаем разработку мобильных приложений, CRM-систем, интеграцию с различными сервисами и другие IT-решения. Стоимость зависит от сложности проекта и требуемого функционала."
+            />
           </div>
         </div>
       </section>

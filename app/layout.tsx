@@ -6,9 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Gem - The backend to build the modern web",
-  description: "Gem is the open-source Next.js backend used in production by the most innovative companies on earth.",
-    generator: 'v0.dev'
+  title: "Altergemu",
+  description: "Altergemu - developers company.",
 }
 
 export default function RootLayout({
