@@ -2,22 +2,28 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
 export const metadata: Metadata = {
-  title: "Altergemu",
-  description: "Altergemu - developers company.",
+  title: "altergemu - Команда разработчиков IT-контента",
+  description:
+    "Создаем сайты, приложения и цифровые решения для вашего бизнеса. Корпоративные сайты, интернет-магазины, дизайн, Telegram боты и другие IT-решения.",
+  keywords: "разработка сайтов, создание сайтов, веб-разработка, дизайн логотипов, telegram боты, интернет-магазины",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }
